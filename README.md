@@ -21,6 +21,23 @@ This project demonstrates a simple, end-to-end document automation pipeline for 
 ├── requirements.txt          # List of Python libraries needed
 └── README.md                 # This file
 
+Document Automation Explanation
+
+This project is a practical example of document automation, where each step—creating or uploading PDFs, extracting text, annotating fields, cleaning data, and generating outputs—is performed by code instead of manual effort. Specifically:
+
+PDF Generation/Input: Automatically create or ingest bank statement PDFs without manual formatting.
+
+Text Extraction: Programmatically read raw text from each PDF page using pdfplumber.
+
+Field Annotation: Use regular expressions and Python logic to identify and label document elements (dates, amounts, descriptions) into structured fields.
+
+Data Normalization: Convert strings into typed data (e.g., numeric amounts, signed values) automatically.
+
+Categorization & Export: Apply keyword mappings and export results as CSV/JSON without copying or manual tagging.
+
+Visualization: Generate analytics charts directly from the structured data.
+
+Because the entire workflow runs in a single notebook with no manual copy-paste or editing, it fully automates the handling and processing of financial documents.
 
 ## How to Use
 
