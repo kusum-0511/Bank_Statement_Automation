@@ -1,77 +1,62 @@
-Project Overview
+# Bank Statement Automation Demo
 
-This project shows a complete, step-by-step pipeline to process bank statement PDF files automatically. It uses Python in Google Colab to:
+This project demonstrates a simple, end-to-end document automation pipeline for bank statements using Python in Google Colab. It shows how to automatically extract data from a PDF, transform it into structured formats, and visualize the results.
 
-Generate sample PDF statements
+## Project Description
 
-Extract text and annotate each field
+1. **PDF Input**: A sample bank statement (`bank_statement.pdf`) is generated or uploaded.  
+2. **Text Extraction**: Use `pdfplumber` to pull raw text from the PDF.  
+3. **Field Annotation**: Identify and label each piece of text (date, description, debit/credit type, amount, balance).  
+4. **Data Normalization**: Convert debit entries to negative values and credit entries to positive values.  
+5. **Transaction Categorization**: Map descriptions to spending categories (e.g., Shopping, Utilities, Income).  
+6. **Export**: Save the cleaned data as `parsed_transactions.csv` and `transactions.json`.  
+7. **Visualization**: Display a bar chart of spend by category using `matplotlib`.  
 
-Normalize financial data
+## Repository Structure
+Bank-statement-automation
+  bank_statement.pdf        # Sample PDF statement
+  notebook.ipynb            # Google Colab notebook with full pipeline
+  parsed_transactions.csv   # Example CSV output after extraction
+  transactions.json         # Example JSON output
+  requirements.txt          # List of Python libraries needed
+  README.md                 # This file
 
-Categorize transactions
 
-Export structured CSV/JSON files
+## How to Use
 
-Visualize spend patterns
+1. **Open the notebook** in Google Colab:  
+   - Go to File -> Open notebook -> Upload `.ipynb file`.  
+2. **Install dependencies**:  
+   ```bash
+   !pip install -r requirements.txt
+   
+3. Upload or generate the sample PDF:
 
-This demo highlights my ability to automate complex document workflows from start to finish.
+  If you have bank_statement.pdf, upload it when prompted.
 
-Step-by-Step Instructions
+  Or run the PDF generation cells to create a new sample.
 
-Install Dependencies
+4. Run all cells from top to bottom.
 
-pip install -r requirements.txt
+5. Download outputs:
 
-Open the Notebook
+  parsed_transactions.csv and transactions.json will download automatically.
 
-Upload or open notebook.ipynb in Google Colab.
+  Review the bar chart to see the spending breakdown by category.
 
-Upload Sample PDF
+Skills Highlighted
 
-When prompted, upload demo_statement.pdf file.
+  PDF processing with ReportLab and pdfplumber.
 
-Generate PDFs (Optional)
+  Document annotation via text parsing and regex.
 
-Run the PDF generation cells to create new bank statement samples.
+  Data cleaning & transformation using pandas.
 
-Extract & Annotate
+  Transaction categorization with keyword mapping.
 
-Run the text extraction cells using pdfplumber.
+  Data visualization using matplotlib.
 
-The code identifies lines starting with dates and splits fields by whitespace.
+  End-to-end automation in a notebook environment.
 
-Normalize Data
 
-Convert debit entries (Db) to negative values and credit entries (Cr) to positive values.
 
-Categorize Transactions
-
-Apply a simple keyword-based mapping to tag each transaction into categories like Shopping, Utilities, or Income.
-
-Export Outputs
-
-Download parsed_transactions.csv and transactions.json via built-in Colab commands.
-
-Visualize Spend
-
-Run the matplotlib cell to display a bar chart of spend by category.
-
-Review Results
-
-Inspect the generated CSV, JSON, and chart to verify correct automation.
-
-Skills Demonstrated
-
-PDF Generation: ReportLab for creating demo PDF statements.
-
-Text Extraction: pdfplumber to pull raw text from PDFs.
-
-Document Annotation: Regex and Python logic to label fields like date, description, amount, and balance.
-
-Data Transformation: pandas for cleaning, normalizing, and exporting structured data.
-
-Data Enrichment: Keyword-based mapping to categorize transactions.
-
-Data Visualization: matplotlib for simple analytics charts.
-
-End-to-End Automation: Orchestrating all steps in Google Colab for a self-contained demo.
