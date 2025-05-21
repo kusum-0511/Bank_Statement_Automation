@@ -13,13 +13,13 @@ This project demonstrates a simple, end-to-end document automation pipeline for 
 7. **Visualization**: Display a bar chart of spend by category using `matplotlib`.  
 
 ## Repository Structure
-Bank-statement-automation
-  bank_statement.pdf        # Sample PDF statement
-  notebook.ipynb            # Google Colab notebook with full pipeline
-  parsed_transactions.csv   # Example CSV output after extraction
-  transactions.json         # Example JSON output
-  requirements.txt          # List of Python libraries needed
-  README.md                 # This file
+/demo-bank-statement-automation
+├── demo_statement.pdf        # Sample PDF statement
+├── notebook.ipynb            # Google Colab notebook with full pipeline
+├── parsed_transactions.csv   # Example CSV output after extraction
+├── transactions.json         # Example JSON output
+├── requirements.txt          # List of Python libraries needed
+└── README.md                 # This file
 
 
 ## How to Use
